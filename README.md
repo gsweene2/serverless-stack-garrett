@@ -14,5 +14,7 @@ A great resource for
 
 ```
 npm run build
-aws s3 sync build/ s3://notes-app-ciient-garrett
+aws s3 sync build/ s3://notes-app-ciient-garrett --delete
+aws cloudfront create-invalidation --distribution-id E18AY1FT7925S6 --paths "/*"
+aws cloudfront create-invalidation --distribution-id E37KZH3NT5MRXU --paths "/*"
 ```
